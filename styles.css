@@ -94,7 +94,7 @@ body {
   color: var(--clr-neutral-900);
   text-align: center;
   background-color: var(--clr-neutral-200);
-  margin: 0;
+  margin: 2em 0;
   padding: 0;
 }
 
@@ -115,6 +115,7 @@ h2 {
 
 h3 {
   font-size: var(--fs-700);
+  margin-bottom: 1em;
 }
 
 .hero-text,
@@ -155,17 +156,19 @@ h3 {
   color: var(--clr-neutral-200);
   font-weight: var(--fw-700);
   padding: 0.8em 2em;
+  border: none;
   border-radius: 28px;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btn-dark {
   background-color: var(--clr-neutral-900);
 }
 
-.btn-dark:focus,
-.btn-dark:hover {
+.btn-dark:hover,
+.btn-dark:focus {
   background-color: var(--clr-primary-500);
 }
 
@@ -173,17 +176,34 @@ h3 {
   background-color: var(--clr-primary-300);
 }
 
-.btn-accent:focus,
-.btn-accent:hover {
+.btn-accent:hover,
+.btn-accent:focus {
   background-color: var(--clr-primary-200);
+}
+
+.slider-btn {
+  background-color: var(--clr-neutral-900);
+  padding: 1.3em;
+  border: none;
+  border-radius: 50px;
+  margin: 0.5em;
+}
+
+.slider-btn:hover,
+.slider-btn:focus {
+  background-color: var(--clr-primary-500);
+}
+
+.arrow-icon {
+  width: 1rem;
 }
 
 /* Layout */
 
-.container-all {
+.container {
   width: 90%;
   max-width: 1110px;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 
 /* header & footer */
@@ -206,10 +226,6 @@ header {
 @media (min-width: 600px) {
   .logo {
     max-width: 4rem;
-  }
-
-  .container-all {
-    margin: 2em auto;
   }
 }
 
@@ -337,7 +353,66 @@ main {
 /* my work section */
 
 .my-work {
-  margin-bottom: 3em;
+  position: relative;
+  margin-bottom: 4em;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  height: 50%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hide-first-slide {
+  transform: translateX(-105%);
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.slider-btns-container {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 600px) {
+  .my-work {
+    height: 600px;
+  }
+
+  .slider-container {
+    height: 60%;
+    width: 50%;
+  }
+
+  .slider-btns-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .slider-container {
+    width: 35%;
+  }
 }
 
 /* booking section */

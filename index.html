@@ -13,11 +13,13 @@
     <title>Single-page design portfolio</title>
   </head>
   <body>
-    <div class="container-all">
+    <div class="container">
       <header>
         <img class="logo" src="assets/logo.svg" alt="designs solution logo" />
         <a class="btn consultation-btn btn-dark" href="#">Free Consultation</a>
       </header>
+    </div>
+    <div class="container">
       <div class="hero">
         <div class="hero-intro">
           <h1 class="title">Design solutions made easy</h1>
@@ -78,6 +80,8 @@
         <!--close grid-->
       </div>
       <!--close hero-->
+    </div>
+    <div class="container">
       <main>
         <img
           src="assets/image-amy.webp"
@@ -95,20 +99,36 @@
           >
         </div>
       </main>
-      <section class="my-work">
-        <h3>My Work</h3>
-        <div class="slider">
-          <img src="assets/image-slide-1.jpg" alt="" />
-          <img src="assets/image-slide-2.jpg" alt="" />
-          <img src="assets/image-slide-3.jpg" alt="" />
-          <img src="assets/image-slide-4.jpg" alt="" />
-          <img src="assets/image-slide-5.jpg" alt="" />
+    </div>
+    <section class="my-work">
+      <h3>My Work</h3>
+      <div class="slider-container hide-first-slide">
+        <div class="slide">
+          <img class="slide-img" src="assets/image-slide-1.jpg" alt="" />
         </div>
-        <div class="slider-btns">
-          <button class="btn-left" title="go left button"></button>
-          <button class="btn-right" title="go right button"></button>
+        <div class="slide">
+          <img class="slide-img" src="assets/image-slide-2.jpg" alt="" />
         </div>
-      </section>
+        <div class="slide">
+          <img class="slide-img" src="assets/image-slide-3.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img class="slide-img" src="assets/image-slide-4.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img class="slide-img" src="assets/image-slide-5.jpg" alt="" />
+        </div>
+      </div>
+      <div class="slider-btns-container">
+        <button class="btn-left slider-btn" title="go left button">
+          <img class="arrow-icon" src="assets/icon-arrow-left.svg" alt="" />
+        </button>
+        <button class="btn-right slider-btn" title="go right button">
+          <img class="arrow-icon" src="assets/icon-arrow-right.svg" alt="" />
+        </button>
+      </div>
+    </section>
+    <div class="container">
       <section class="booking">
         <div>
           <h2>Book a call with me</h2>
@@ -122,10 +142,13 @@
           >Free Consultation</a
         >
       </section>
+    </div>
+    <div class="container">
       <footer>
         <img class="logo" src="assets/logo.svg" alt="designs solution logo" />
         <a class="btn consultation-btn btn-dark" href="#">Free Consultation</a>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
