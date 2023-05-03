@@ -12,7 +12,7 @@ slides.forEach(setSlidesPosition)
 
 // move carousel
 
-let counter = 0
+let counter = 2
 
 btnLeft.addEventListener('click', function () {
   counter--
@@ -29,12 +29,12 @@ function carousel() {
     counter = 0
   }
 
-  if (counter === -1) {
-    slider.classList.remove('hide-first-slide')
+  if (counter < 0) {
+    counter = slides.length - 1
   }
 
   slides.forEach(function (slide) {
     slide.style.transform = `translateX(-${counter * 105}%)`
-    slide.style.transition = 'all 0.25s'
+    slide.style.transition = 'all 0.4s'
   })
 }
