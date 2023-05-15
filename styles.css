@@ -187,6 +187,7 @@ h3 {
   border: none;
   border-radius: 50px;
   margin: 0.5em;
+  cursor: pointer;
 }
 
 .slider-btn:focus,
@@ -373,7 +374,7 @@ main {
   bottom: 0;
   width: 100%;
   height: 100%;
-  transform: translateX(-210%);
+  transform: translateX(-315%);
 }
 
 .slide-img {
